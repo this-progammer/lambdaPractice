@@ -6,7 +6,6 @@
 
 /*rand loop inc++*/
 int main() {
-
     auto f = [&]() {
         for( auto j = 1; j != 11; j++ ) {
                 if( j > 9 ){
