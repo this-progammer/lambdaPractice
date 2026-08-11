@@ -15,7 +15,7 @@ void Draw_Grid(){
     char col[2] = "_";
     char row[2] = "|";
     //store in an array
-    std::array<char*, 4> grid_elements = { col, row };
+    std::array<char*, 4> grid_elements = { col, row }; //useless, didn't end up using
     for( auto j = 0; j < grids[i]; j++ ){
          auto drawGrid = [&](){
             char map[64] = {
