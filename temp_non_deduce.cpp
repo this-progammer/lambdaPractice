@@ -16,7 +16,7 @@ int main() {
     };
     
     /*explicit call*/
-    int j = f.operator ()<int>();
+    int j = f.operator()<int>();
     
     std::cout << j << "\n";
     
