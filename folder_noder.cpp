@@ -51,7 +51,7 @@ public:
 class Folder {
     std::string _name;
     int _files_count[MAX_FILES]; 
-    bool __is_empty;
+    mutable bool _isempty;
     FileNode _nodes;
 public:
 
@@ -78,6 +78,15 @@ void Folder::FindNodePtr(FileNode& node) {
     }
     int pc = id;
     std::cout << pc;
+}
+
+// find node by string
+void Folder::FindNodeString(const std::string& _nodename){
+    for( auto i = 0; i < this->_file_count; i++ ){
+            if( _nodename == this->_nodes._strName[i] ){
+                
+            }
+    }
 }
 
 
