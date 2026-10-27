@@ -52,7 +52,7 @@ class Folder {
     std::string _name;
     int _files_count[MAX_FILES]; 
     mutable bool _isempty;
-    FileNode _nodes;
+    FileNode _nodes[MAX_FILES];
 public:
 
     inline Folder& getFolder() {
@@ -60,7 +60,7 @@ public:
     }
     
     void FindNodePtr(FileNode& node);
-    void FindNodeString(const std::string& _nodename);
+    void FindNodeString();
 };
 
 // find node by ptr
@@ -81,12 +81,20 @@ void Folder::FindNodePtr(FileNode& node) {
 }
 
 // find node by string
-void Folder::FindNodeString(const std::string& _nodename){
-    for( auto i = 0; i < this->_file_count; i++ ){
-            if( _nodename == this->_nodes._strName[i] ){
-                
+void Folder::FindNodeString(){
+    std::string namename;
+    std::cin >> namename;
+        for( auto i = 0; i < MAX_FILES; i++ ){
+            if(namename != this->_nodes[i].getName()){
+                for(auto j = 1; j >= i; j++){
+                    std::cout << "No Such Node Exist\n";
+                }
+            }
+            if(namename == this->_nodes[i].getName()){
+                this->_nodes[i].getNode().getName();
             }
     }
+ std::cout << namename << "\n";
 }
 
 
@@ -95,6 +103,7 @@ int main() {
     FileNode nodeptr;
 
     folderptr.FindNodePtr( nodeptr );
+    folderptr.FindNodeString();
 
     return 0;
 }
