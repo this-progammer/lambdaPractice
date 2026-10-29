@@ -102,3 +102,24 @@ int main() {
 
     return 0;
 }
+
+/*    OUTPUT AS OF NOW :(
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Cannot Add User To Party, Server User Limit Reached.
+Server Name:
+Server Users:   0x7ffd4fdd7cb0
+
+[Execution complete with exit code 0]
+*/
