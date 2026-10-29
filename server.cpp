@@ -49,7 +49,7 @@ public:
         return users;
     }
 
-    const std::string& getServerName() {
+    const std::string& getServerName()  {
         return servername;
     }
 
@@ -59,6 +59,12 @@ public:
     void kickUserFromParty(User& user);
     void showServerInfo();
 };
+
+void Server::setServerName(const std::string& name){
+    auto n = this->servername;
+    n = name;
+    this->getServerName();
+}
 
 void Server::addUserToParty(User& user) {
      for(auto i = 1; i < 10; i++){
@@ -70,6 +76,7 @@ void Server::addUserToParty(User& user) {
              };
          if( count > 10 ){
              std::cout << "Cannot Add User To Party, Server User Limit Reached.\n";
+             continue;
          }
          addVals();
          this->getUsers();
@@ -81,3 +88,17 @@ void Server::showServerInfo() {
     std::cout << "Server Users:\t" << this->getUsers() << "\n";
 }
 
+int main() {
+    User usr1;
+    User usr2;
+    Server server;
+
+    const std::string _n = "ServBlck2005";
+    
+    server.setServerName( _n );
+    server.addUserToParty( usr1 );
+    server.addUserToParty( usr2 );
+    server.showServerInfo();
+
+    return 0;
+}
