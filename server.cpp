@@ -84,8 +84,9 @@ void Server::addUserToParty(User& user) {
 }
 
 void Server::showServerInfo() {
+    Server& p = this->getServer();
     std::cout << "Server Name:\t" << this->getServerName() << "\n";
-    std::cout << "Server Users:\t" << this->getUsers() << "\n";
+    std::cout << "Server Users:\t" << p.getUsers() << "\n";
 }
 
 int main() {
